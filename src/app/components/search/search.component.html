@@ -1,0 +1,50 @@
+<form novalidate
+[formGroup]="form">
+<h3>Group Filter</h3>
+<div class="row">
+<div class="col-md-6">
+<input type="text"
+formControlName="firstName"
+class="form-control"
+placeholder="First Name"
+/>
+</div>
+<div class="col-md-6">
+<input type="text"
+formControlName="lastName"
+class="form-control"
+placeholder="Last Name"
+/>
+</div>
+<div class="col-md-6">
+<input type="text"
+formControlName="jobTitle"
+class="form-control"
+placeholder="Job Title"
+/>
+</div>
+<div class="col-md-6 col-sm-6">
+<select ngDefaultControl class="form-control form-control-lg" formControlName="level">
+<option value=""> Level</option>
+<option [ngValue]="level" *ngFor="let level of levels">{{level}}</option>
+</select>
+</div>
+<div class="col-md-6">
+<input type="text"
+formControlName="agefrom"
+class="form-control"
+placeholder="age from"
+/>
+</div>
+<div class="col-md-6">
+<input type="text"
+formControlName="ageto"
+class="form-control"
+placeholder="age to"
+/>
+</div>
+<div class="col-md-12 col-sm-12">
+<button class="btn btn-primary float-right"
+(click)="search(form.value)">Search</button>
+</div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+  <br/>
+  <h1>List of Users</h1>
+  <hr/>
+
+  <app-search (groupFilters)="filters = $event"
+              ></app-search>
+
+  <br/>
+
+  <app-user-list [groupFilters]="filters"
+                 [searchByKeyword]="searchText"></app-user-list>  
+</div>
+
+
